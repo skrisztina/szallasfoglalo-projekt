@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="def_height">48dp</dimen>
+    <dimen name="def_margintop">20dp</dimen>
+    <dimen name="def_margin">30dp</dimen>
+</resources>

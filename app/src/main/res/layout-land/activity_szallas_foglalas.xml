@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SzallasFoglalasActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/foglName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/szallas_name"
+            android:textColor="#FF1A4321"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/foglImage"
+            android:layout_width="65dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/foglName"
+            android:maxHeight="200dp"
+            android:maxWidth="350dp"/>
+
+        <TextView
+            android:id="@+id/foglHely"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/szallas_place"
+            android:textColor="#FF1A4321"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/foglImage"/>
+
+        <RatingBar
+            android:id="@+id/foglRating"
+            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/foglHely"/>
+
+        <TextView
+            android:id="@+id/foglPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/szallas_ar"
+            android:textColor="#FF1A4321"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/foglRating"/>
+
+        <TextView
+            android:id="@+id/foglInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/szallas_info"
+            android:textColor="#FF1A4321"
+            android:textSize="12sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/foglPrice"/>
+
+        <EditText
+            android:id="@+id/foglKezdet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/erkezes"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:layout_below="@+id/foglInfo" />
+
+        <EditText
+            android:id="@+id/foglVeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="160dp"
+            android:hint="@string/tavozas"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:layout_below="@+id/foglInfo"
+            android:layout_alignParentEnd="true"/>
+
+        <Button
+            android:id="@+id/foglBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="#157819"
+            android:minHeight="48dp"
+            android:onClick="foglalas"
+            android:text="@string/lefoglalom"
+            android:layout_below="@+id/foglKezdet"
+            android:layout_marginStart="190dp"/>
+
+        <Button
+            android:id="@+id/megse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#157819"
+            android:minHeight="48dp"
+            android:text="@string/back"
+            android:layout_below="@+id/foglKezdet"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="190dp"
+            android:onClick="vissza"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>

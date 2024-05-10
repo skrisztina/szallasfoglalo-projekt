@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".ProfilActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/profile"
+            android:textColor="#FF1A4321"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/profilName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="200dp"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            android:minWidth="100dp"
+            android:minHeight="48dp"/>
+
+        <TextView
+            android:id="@+id/nevTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/textView"
+            android:text="@string/name"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <EditText
+            android:id="@+id/profilEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/profilName"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="200dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:minWidth="100dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/emailTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nevTV"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="35dp"
+            android:text="@string/email"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/profilPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profilEmail"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="200dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/phone"
+            android:inputType="phone"
+            android:minWidth="100dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/phoneTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="35dp"
+            android:text="@string/phone"
+            android:textSize="15sp"
+            android:layout_below="@+id/emailTV"/>
+
+        <EditText
+            android:id="@+id/profilHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profilPhone"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="200dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/home"
+            android:inputType="textPostalAddress|textMultiLine"
+            android:minWidth="100dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/homeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="35dp"
+            android:text="@string/home"
+            android:textSize="15sp"
+            android:layout_below="@+id/phoneTV"/>
+
+        <ImageButton
+            android:id="@+id/visszaBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="@string/back"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="15dp"
+            android:minHeight="48dp"
+            android:onClick="back"
+            android:src="@drawable/vissza"
+            android:text="@string/vissza"
+            app:tint="#FF1A4321" />
+
+        <Button
+            android:id="@+id/modositBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="190dp"
+            android:backgroundTint="#157819"
+            android:minHeight="48dp"
+            android:onClick="modositas"
+            android:text="@string/modosit"
+            android:layout_below="@id/homeTV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp" />
+
+        <Button
+            android:id="@+id/deregBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fioktorles"
+            android:layout_marginTop="10dp"
+            android:minHeight="48dp"
+            android:onClick="torles"
+            android:backgroundTint="#E30909"
+            android:layout_below="@+id/modositBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"/>
+
+    </RelativeLayout>
+
+</ScrollView>

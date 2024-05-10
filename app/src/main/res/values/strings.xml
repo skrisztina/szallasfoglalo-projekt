@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">Szallas</string>
+    <string name="username">Felhasználónév</string>
+    <string name="passwd">Jelszó</string>
+    <string name="login">Bejelentkezés</string>
+    <string name="register">Regisztáció</string>
+    <string name="title">Szállás Foglaló</string>
+    <string name="name">Név</string>
+    <string name="email">E-mail cím</string>
+    <string name="phone">Telefonszám</string>
+    <string name="home">Lakcím</string>
+    <string name="passwdagain">Jelszó megerősítése</string>
+    <string name="traveller">Utazó</string>
+    <string name="host">Szállásadó</string>
+    <string name="back">Mégse</string>
+    <string name="anonim">Folytatás bejelentkezés nélkül</string>
+    <string name="szallas_name">Szálláshely neve</string>
+    <string name="szallas_info">Szállás infó</string>
+    <string name="szallas_place">Hely</string>
+    <string name="szallas_ar">Ár/éj</string>
+    <string name="szallas_reszletek">Részletek</string>
+    <string name="search">Keresés</string>
+    <string name="profile">Profilom</string>
+    <string name="logout">Kijelentkezés</string>
+    <string name="foglalasok">Foglalásaim</string>
+    <string name="foglalasaim">Foglalásaim</string>
+    <string name="vissza">Vissza</string>
+    <string name="modosit">Módosítom</string>
+    <string name="szallasname">Szállás neve</string>
+    <string name="kezdo_date">Kezdő dátum</string>
+    <string name="erkezes">Érkezés</string>
+    <string name="tavozas">Távozás</string>
+    <string name="lefoglalom">Lefoglalom</string>
+    <string name="fioktorles">Fiók törlése</string>
+    <string name="fogl">Foglalásaim</string>
+    <string name="lemondom">Lemondom</string>
+
+    <string-array name="szallas_names">
+        <item>Novotel Szeged</item>
+        <item>Rozika panzió</item>
+        <item>Laura Apartmanház</item>
+        <item>Vica üdülő</item>
+        <item>Grand Hotel Glorius</item>
+        <item>Luxury Duna</item>
+        <item>Spirit Apartman Budapest</item>
+        <item>Korona Étterem és Panzió</item>
+        <item>Duna Vendégház</item>
+        <item>Aranypart Villa</item>
+        <item>Pannonia Hotel</item>
+        <item>Bazilika Panzió</item>
+    </string-array>
+    <string-array name="szallas_places">
+        <item>Szeged</item>
+        <item>Kiskunhalas</item>
+        <item>Balatonlelle</item>
+        <item>Eger</item>
+        <item>Makó</item>
+        <item>Budapest</item>
+        <item>Budapest</item>
+        <item>Székesfehérvár</item>
+        <item>Dunaújváros</item>
+        <item>Siófok</item>
+        <item>Sopron</item>
+        <item>Esztergom</item>
+    </string-array>
+    <string-array name="szallas_info">
+        <item>Elegáns hotel a város szívében.</item>
+        <item>Nyugodt, családias környezet.</item>
+        <item>Meghitt nyaralás a tó partján.</item>
+        <item>Nyugalom, szabadság és bor.</item>
+        <item>Exkluzív wellnesshotel kisvárosi környezetben.</item>
+        <item>Budai luxusszálló, a Gellért-hegy lábánál.</item>
+        <item>Kényelmes apartman Budapest belvárosának szívében.</item>
+        <item>Csodás szálloda a történelmi város központjában.</item>
+        <item>Meghitt vendégház a Duna partján.</item>
+        <item>Modern luxusvilla az Aranyparton.</item>
+        <item>A város legrégebbi szállodája a történemi város szívében.</item>
+        <item>Mesés panzió a festői Dunakanyar mellett, Bazilikára nyíló kilátással.</item>
+    </string-array>
+    <array name="szallas_rate">
+        <item>4.5</item>
+        <item>3.8</item>
+        <item>4.2</item>
+        <item>4.8</item>
+        <item>4.9</item>
+        <item>4.8</item>
+        <item>4.3</item>
+        <item>4.5</item>
+        <item>4</item>
+        <item>4.9</item>
+        <item>4.4</item>
+        <item>4.6</item>
+    </array>
+    <string-array name="szallas_price">
+        <item>25000 Ft/fő/éj</item>
+        <item>8000 Ft/fő/éj</item>
+        <item>18000 Ft/fő/éj</item>
+        <item>15000 Ft/fő/éj</item>
+        <item>20000 Ft/fő/éj</item>
+        <item>35000 Ft/fő/éj</item>
+        <item>30000 Ft/fő/éj</item>
+        <item>22000 Ft/fő/éj</item>
+        <item>15000 Ft/fő/éj</item>
+        <item>50000 Ft/fő/éj</item>
+        <item>36000 Ft/fő/éj</item>
+        <item>27000 Ft/fő/éj</item>
+    </string-array>
+    <array name="szallas_images">
+        <item>@drawable/szeged</item>
+        <item>@drawable/kiskunhalas</item>
+        <item>@drawable/balatonlelle</item>
+        <item>@drawable/eger</item>
+        <item>@drawable/mako</item>
+        <item>@drawable/budapest1</item>
+        <item>@drawable/budapest2</item>
+        <item>@drawable/szekesfehervar</item>
+        <item>@drawable/dunaujvaros</item>
+        <item>@drawable/siofok</item>
+        <item>@drawable/sopron</item>
+        <item>@drawable/esztergom</item>
+    </array>
+</resources>

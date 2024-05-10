@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/registrerTW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#157819"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nameET"
+                    android:layout_below="@+id/registrerTW"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginEnd="80dp"
+                    android:minHeight="@dimen/def_height"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:hint="@string/name"
+                    android:inputType="textPersonName"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emailET"
+                    android:layout_below="@+id/nameET"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginEnd="80dp"
+                    android:minHeight="@dimen/def_height"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/phoneET"
+                    android:layout_below="@+id/emailET"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginEnd="80dp"
+                    android:minHeight="@dimen/def_height"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:hint="@string/phone"
+                    android:inputType="phone" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/homeET"
+                    android:layout_below="@+id/phoneET"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginEnd="80dp"
+                    android:minHeight="@dimen/def_height"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:hint="@string/home"
+                    android:maxLines="4"
+                    android:inputType="textPostalAddress|textMultiLine" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/passwdET"
+                    android:layout_below="@+id/homeET"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginEnd="80dp"
+                    android:minHeight="@dimen/def_height"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:hint="@string/passwd"
+                    android:inputType="textPassword" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/passwdagainET"
+                    android:layout_below="@+id/passwdET"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginEnd="80dp"
+                    android:minHeight="@dimen/def_height"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:hint="@string/passwdagain"
+                    android:inputType="textPassword" />
+
+
+                <Button
+                    android:id="@+id/registerB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/passwdagainET"
+                    android:layout_marginStart="170dp"
+                    android:minHeight="@dimen/def_height"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#157819"
+                    android:text="@string/register"
+                    android:onClick="regisztracio" />
+
+                <Button
+                    android:id="@+id/backBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/passwdagainET"
+                    android:layout_marginEnd="170dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="#157819"
+                    android:minHeight="48dp"
+                    android:onClick="vissza"
+                    android:text="@string/back" />
+
+
+
+        </RelativeLayout>
+
+</ScrollView>

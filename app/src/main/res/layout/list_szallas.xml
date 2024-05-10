@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/szallasImage"
+            android:adjustViewBounds="true"
+            android:maxWidth="350dp"
+            android:maxHeight="200dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/szallasTitle"
+            android:layout_below="@+id/szallasImage"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:padding="5dp"
+            android:text="@string/szallas_name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/szallasPlace"
+            android:layout_below="@+id/szallasTitle"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="@string/szallas_place"/>
+
+        <RatingBar
+            android:id="@+id/szallasRating"
+            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/szallasPlace"
+            android:layout_centerHorizontal="true"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressTint="#A89700" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/szallasPrice"
+            android:layout_below="@+id/szallasRating"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:padding="5dp"
+            android:text="@string/szallas_ar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/szallasInfo"
+            android:layout_below="@id/szallasPrice"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:text="@string/szallas_info"/>
+
+        <Button
+            android:id="@+id/szallasBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/szallasInfo"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#157819"
+            android:text="@string/szallas_reszletek" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
