@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -16,8 +15,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
-
-    private static final String LOG_TAG = MainActivity.class.getName();
     private static final int KEY = 64;
 
     private FirebaseAuth auth;
@@ -41,9 +38,6 @@ public class MainActivity extends AppCompatActivity {
         String email = userEmail.getText().toString();
         String password = passwdEt.getText().toString();
 
-        //logolás:
-        Log.i(LOG_TAG, "Bejelentkezett: " + email + ", jelszó: " + password);
-
         if(email.equals("") || password.equals("")){
             Toast.makeText(MainActivity.this, "A mezők kitöltése kötelező!", Toast.LENGTH_LONG).show();
         }
@@ -53,10 +47,8 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(MainActivity.this, "Sikeres bejelentkezés! ", Toast.LENGTH_LONG).show();
-                    Log.i(LOG_TAG, "Sikeres bejelentkezés");
                     startSzallasok();
                 } else {
-                    Log.i(LOG_TAG, "A bejelentkezés nem volt sikeres.");
                     Toast.makeText(MainActivity.this, "A bejelentkezés nem volt sikeres: "+ task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
@@ -74,10 +66,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Log.i(LOG_TAG, "Sikeres anonim bejelentkezés");
+                    Toast.makeText(MainActivity.this, "Sikeres anonim bejelentkezés", Toast.LENGTH_LONG).show();
                     startSzallasok();
                 } else {
-                    Log.i(LOG_TAG, "Az anonim bejelentkezés nem volt sikeres");
                     Toast.makeText(MainActivity.this, "Az anonim bejelentkezés nem volt sikeres: "+ task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
             }

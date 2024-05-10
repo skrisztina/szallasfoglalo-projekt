@@ -6,13 +6,11 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
-import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 
 public class NotificationHandler {
     private static final String CHANNEL_ID = "szallasfoglalo_channel";
-    private static final String LOG_TAG = SzallasFoglalasActivity.class.getName();
     private final int NOTIF_ID = 0;
     private Context context;
     private NotificationManager manager;
@@ -25,13 +23,11 @@ public class NotificationHandler {
 
     private void createChannel(){
         if(Build.VERSION.SDK_INT < Build.VERSION_CODES.O){
-            Log.i(LOG_TAG, "Notif createChannel elbukott a verziószámon");
             return;
         }else {
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "SzallasFoglalo", NotificationManager.IMPORTANCE_HIGH);
             channel.setDescription("Értesítés a SzállásFoglaló-tól.");
             manager.createNotificationChannel(channel);
-            Log.i(LOG_TAG, "Notif createChannel megcsinálta a channelt");
         }
     }
 
@@ -44,6 +40,5 @@ public class NotificationHandler {
                 .setSmallIcon(R.drawable.foglalasok_icon).setPriority(NotificationCompat.PRIORITY_HIGH).setContentIntent(pendint);
 
         manager.notify(NOTIF_ID, builder.build());
-        Log.i(LOG_TAG, "Notifhandler send most értesítette a managert.");
     }
 }

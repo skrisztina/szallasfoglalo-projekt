@@ -1,7 +1,6 @@
 package com.example.szallas;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +25,6 @@ public class SzallasItemAdapter extends RecyclerView.Adapter<SzallasItemAdapter.
         void onButtonClick(SzallasItem szallas);
     }
 
-    private static final String LOG_TAG = SzallasItemAdapter.class.getName();
     private ArrayList<SzallasItem> szallasokdata;
     private ArrayList<SzallasItem> szallasokdataall;
     private Context context;
@@ -87,17 +85,11 @@ public class SzallasItemAdapter extends RecyclerView.Adapter<SzallasItemAdapter.
                 String filter = constraint.toString().toLowerCase().trim();
                 for(SzallasItem szallas : szallasokdataall){
                     if(szallas.getPlace().toLowerCase().trim().contains(filter)){
-                        Log.i(LOG_TAG, "Vizsgált szállás: " + szallas.getName());
                         filtered.add(szallas);
-                        Log.i(LOG_TAG, "Most adta hozzá!!");
                     }
                 }
                 results.count = filtered.size();
                 results.values = filtered;
-
-                for(SzallasItem szurt: filtered){
-                    Log.i(LOG_TAG, "Filterben lévő szállás: " + szurt.getName());
-                }
             }
 
             return results;
@@ -134,7 +126,6 @@ public class SzallasItemAdapter extends RecyclerView.Adapter<SzallasItemAdapter.
                     if(mlistener != null && pos != RecyclerView.NO_POSITION){
                         SzallasItem clicked = szallasokdataall.get(pos);
                         mlistener.onButtonClick(clicked);
-                        Log.i(LOG_TAG, "Részletek gomb megnyomva." + clicked.getName());
                     }
                 }
             });

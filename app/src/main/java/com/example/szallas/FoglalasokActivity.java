@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -23,8 +22,6 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 
 public class FoglalasokActivity extends AppCompatActivity implements FoglalasAdapter.OnButtonClickListener{
-
-    private static final String LOG_TAG = FoglalasokActivity.class.getName();
     private FirebaseUser user;
     private String userEmail;
     private FirebaseFirestore mfirestore;
@@ -43,9 +40,7 @@ public class FoglalasokActivity extends AppCompatActivity implements FoglalasAda
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         if(user != null){
-            Log.i(LOG_TAG, "Regisztrált felhasználó: " + user.getEmail());
         } else {
-            Log.i(LOG_TAG, "Nem regisztrált felhasználó.");
             finish();
         }
         userEmail = user.getEmail();
@@ -62,7 +57,6 @@ public class FoglalasokActivity extends AppCompatActivity implements FoglalasAda
                     for(QueryDocumentSnapshot document : task.getResult()){
                         Foglalas foglalas = document.toObject(Foglalas.class);
                         foglalasok.add(foglalas);
-                        Log.i(LOG_TAG, "Foglalasok +" + foglalas.getSzallasName());
                     }
                     if(foglalasok.size() == 0){
                         Toast.makeText(FoglalasokActivity.this, "Még nincs foglalásod!", Toast.LENGTH_LONG).show();
@@ -73,7 +67,7 @@ public class FoglalasokActivity extends AppCompatActivity implements FoglalasAda
                         recyclerView.setAdapter(adapter);
                     }
                 } else {
-                    Log.e(LOG_TAG, "Hiba a foglalások betöltésekor: " + task.getException());
+                    Toast.makeText(FoglalasokActivity.this, "Hiba a foglalások betöltésekor.", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -93,7 +87,6 @@ public class FoglalasokActivity extends AppCompatActivity implements FoglalasAda
                     String szal = (String) document.getData().get("szallasName");
                     if(szal.equals(clickedname)){
                         document.getReference().delete();
-                        Log.i(LOG_TAG, clickedname + "foglalasa torlodott");
                         finish();
                     }
                 }

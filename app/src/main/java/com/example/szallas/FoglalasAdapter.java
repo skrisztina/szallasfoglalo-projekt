@@ -1,7 +1,6 @@
 package com.example.szallas;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,8 +21,6 @@ public class FoglalasAdapter extends RecyclerView.Adapter<FoglalasAdapter.ViewHo
     public interface OnButtonClickListener {
         void onButtonClick(Foglalas foglalas);
     }
-    private static final String LOG_TAG = FoglalasAdapter.class.getName();
-
     private ArrayList<Foglalas> foglalasok;
     private ArrayList<Foglalas> foglalasokall;
     private Context context;
@@ -88,7 +85,6 @@ public class FoglalasAdapter extends RecyclerView.Adapter<FoglalasAdapter.ViewHo
                     int pos = getAdapterPosition();
                     if(mlistener != null && pos != RecyclerView.NO_POSITION){
                         Foglalas clicked = foglalasokall.get(pos);
-                        Log.i(LOG_TAG, "Delete foglalas clicked!");
                         mlistener.onButtonClick(clicked);
                     }
                 }

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,7 +25,6 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 public class SzallasFoglalasActivity extends AppCompatActivity {
-    private static final String LOG_TAG = SzallasFoglalasActivity.class.getName();
 
     private String szallasId;
     private String szallasName;
@@ -142,7 +140,6 @@ public class SzallasFoglalasActivity extends AppCompatActivity {
                 szallasokcolref.document(szallasId).update("foglalasDb", fogldb).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Log.i(LOG_TAG, "Szallas FoglalasDb++ sikeres");
                     }
                 });
             }

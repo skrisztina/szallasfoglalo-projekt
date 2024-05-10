@@ -19,7 +19,6 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class RegistrationActivity extends AppCompatActivity {
-    private static final String LOG_TAG = RegistrationActivity.class.getName();
     private static final String PREF = RegistrationActivity.class.getPackage().toString();
     private static final int KEY = 64;
 
@@ -78,17 +77,14 @@ public class RegistrationActivity extends AppCompatActivity {
             Toast.makeText(RegistrationActivity.this, "Üres mező!", Toast.LENGTH_LONG).show();
         }
 
-        Log.i(LOG_TAG, "Regisztrált: " + name + ", e-mail: " + email);
-
         auth.createUserWithEmailAndPassword(email, passwd).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Log.i(LOG_TAG, "A regisztráció sikeres volt!");
                     collectionref.add(new User(name,email,phone,home));
+                    Toast.makeText(RegistrationActivity.this, "Sikeres regisztráció!", Toast.LENGTH_LONG).show();
                     startSzallasok();
                 } else {
-                    Log.i(LOG_TAG, "A regisztráció sikertelen volt.");
                     Toast.makeText(RegistrationActivity.this, "A regisztráció nem volt sikeres: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
             }

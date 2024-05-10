@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -27,8 +26,6 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 
 public class ProfilActivity extends AppCompatActivity {
-    private static final String LOG_TAG = ProfilActivity.class.getName();
-
     private EditText profilName;
     private EditText profilEmail;
     private EditText profilPhone;
@@ -148,7 +145,7 @@ public class ProfilActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 } else {
-                    Log.e(LOG_TAG, "Nem sikerült a felhasználó törlése.");
+                    Toast.makeText(ProfilActivity.this, "Hiba a felhasználó törlésekor.", Toast.LENGTH_LONG).show();
                 }
             }
         });

@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -32,7 +31,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Szallasok extends AppCompatActivity implements SzallasItemAdapter.OnButtonClickListener{
-    private static final String LOG_TAG = Szallasok.class.getName();
 
     private FirebaseUser user;
 
@@ -55,10 +53,7 @@ public class Szallasok extends AppCompatActivity implements SzallasItemAdapter.O
 
         user = FirebaseAuth.getInstance().getCurrentUser();
 
-        if(user != null){
-            Log.i(LOG_TAG, "Regisztrált felhasználó.");
-        } else {
-            Log.i(LOG_TAG, "Nem regisztrált felhasználó.");
+        if(user == null){
             finish();
         }
 
@@ -100,12 +95,10 @@ public class Szallasok extends AppCompatActivity implements SzallasItemAdapter.O
                 if(!selectedhely.equals("Válassz várost!")){
                     if(adapter != null){
                         adapter.getFilter().filter(selectedhely);
-                        Log.i(LOG_TAG, "Szűrés: " + selectedhely);
                     }
                 } else {
                     if(adapter!= null){
                         adapter.getFilter().filter("");
-                        Log.i(LOG_TAG, "Szűrés: " + "Válassz várost!");
                     }
                 }
             }
@@ -120,7 +113,6 @@ public class Szallasok extends AppCompatActivity implements SzallasItemAdapter.O
 
     public void onButtonClick(SzallasItem clickedSzallas){
         String userEmail = user.getEmail();
-        Log.i(LOG_TAG, "Email: " + userEmail);
         String clickedName = clickedSzallas.getName();
 
         if(user == null || user.isAnonymous()){
