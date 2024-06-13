@@ -1,0 +1,1 @@
+Szállásfoglaló android alkalmazás
